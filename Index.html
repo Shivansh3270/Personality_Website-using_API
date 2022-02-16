@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONALITY</title>
+    <link rel="stylesheet" type="text/css" href="./Style.css">
+    <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+</head>
+<body>
+    <section>
+        <h1>WHAT DOES YOUR NAME TELL ABOUT YOUR PERSONALITY ?</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label>Enter Your Name</label><br>
+                <input type="text" name="" id="nameID">
+            </div>
+            <div class="imgdiv">
+                <img src="./img.jpg" width="200" height="200" class="imgchange">
+            </div>
+            <button>Click me</button>
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const name = $('#nameID').val();
+                alert(name);
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+                const b = $('.imgchange');
+                console.log(b);
+            });
+        });
+    </script>
+    
+</body>
+</html>
